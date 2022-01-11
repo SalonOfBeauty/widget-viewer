@@ -1,3 +1,3 @@
-button.onclick = function() {
+function clickHandler() {
     alert('Клик!');
 };
