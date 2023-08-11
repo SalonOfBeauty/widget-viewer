@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Интеграция виджета</title>
+        <link href="../styles.css" rel="stylesheet" type="text/css">
+        <script>
+          const clickHandler = () => console.log('hi');
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    </head>
+    <body>
+        <div class="bw-Viewer_content">
+            <input
+                id="input"
+                placeholder="Введите ссылку виджета" />
+            <input
+                onclick="clickHandler()"
+                id="button"
+                type="button"
+                value="Открыть виджет"/>
+        </div>
+    </body>
+</html>
