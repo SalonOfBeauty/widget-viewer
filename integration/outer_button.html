@@ -11,8 +11,8 @@
                 const script = document.createElement('script');
                 const uuid = input.value.split('/').at(-1);
                 script.dataset['sabyWidget'] = uuid;
-                script.type = 'text/javascript';
-                script.async = true;
+                /* script.type = 'text/javascript';
+                script.async = true; */
                 script.src = input.value;
                 divElem.before(script);
                 divElem.remove();
