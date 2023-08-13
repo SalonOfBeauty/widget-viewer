@@ -6,15 +6,23 @@
         <link href="../styles.css" rel="stylesheet" type="text/css">
         <script>
             function scriptSetter() {
-                
-                console.log(document.body.querySelector('div[data-id="widget-script-place"]'))
+                const divElem = document.getElementById('widget-script-place');
+                const input = document.getElementById('input');
+                const script = document.createElement('script');
+                const uuid = input.value.split('/').at(-1);
+                script.data-saby-widget = uuid;
+                sws.type = 'text/javascript';
+                sws.async = true;
+                script.src = input.value;
+                divElem.before(script);
+                divElem.remove();
             }
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     </head>
     <body>
-        <div data-id="widget-script-place"></div>
+        <div id="widget-script-place"></div>
         <div class="bw-Viewer_content">
             <input
                 id="input"
