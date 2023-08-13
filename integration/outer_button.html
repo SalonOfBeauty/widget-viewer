@@ -16,13 +16,14 @@
                 script.src = input.value;
                 divElem.before(script);
                 divElem.remove();
+                input.remove();
+                document.getElementById('button').remove();
             }
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     </head>
     <body>
-        <div id="widget-script-place"></div>
         <div class="bw-Viewer_content">
             <input
                 id="input"
@@ -31,7 +32,11 @@
                 onclick="scriptSetter()"
                 id="button"
                 type="button"
-                value="Открыть виджет"/>
+                value="Загрузить виджет"/>
         </div>
+        <div id="widget-script-place"></div>
+        <input
+            type="button"
+            value="Открыть виджет по интеграции"/>
     </body>
 </html>
