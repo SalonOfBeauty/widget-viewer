@@ -10,7 +10,7 @@
                 const input = document.getElementById('input');
                 const script = document.createElement('script');
                 const uuid = input.value.split('/').at(-1);
-                script['data-saby-widget'] = uuid;
+                script.dataset.['saby-widget'] = uuid;
                 script.type = 'text/javascript';
                 script.async = true;
                 script.src = input.value;
