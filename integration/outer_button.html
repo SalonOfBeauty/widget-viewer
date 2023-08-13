@@ -4,17 +4,23 @@
         <meta charset="utf-8">
         <title>Интеграция виджета</title>
         <link href="../styles.css" rel="stylesheet" type="text/css">
-        <script src="./handlers.js"></script>
+        <script>
+            function scriptSetter() {
+                
+                console.log(document.body.querySelector('div[id="widget-script-place"]'))
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     </head>
     <body>
+        <div data-id="widget-script-place"></div>
         <div class="bw-Viewer_content">
             <input
                 id="input"
                 placeholder="Введите ссылку на скрипт виджета" />
             <input
-                onclick="clickHandler()"
+                onclick="scriptSetter()"
                 id="button"
                 type="button"
                 value="Открыть виджет"/>
