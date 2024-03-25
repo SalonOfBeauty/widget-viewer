@@ -14,7 +14,7 @@
                 
                 const script = document.createElement('script');
                 const uuid = input.value.split('/').at(-1);
-                script.dataset['sabyWidget'] = uuid;
+                script.dataset['sabyWidget'] = uuid.split('?')[0];
                 script.src = input.value;
                 divElem.before(script);
                 divElem.remove();
